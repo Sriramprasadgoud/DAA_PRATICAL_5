@@ -24,10 +24,8 @@ int main() {
     cout << "Enter knapsack capacity: ";
     cin >> capacity;
 
-    // DP table
     vector<vector<int>> dp(n + 1, vector<int>(capacity + 1, 0));
 
-    // Dynamic Programming
     for (int i = 1; i <= n; i++) {
         for (int w = 0; w <= capacity; w++) {
 
@@ -45,7 +43,6 @@ int main() {
 
     cout << "\nMaximum Profit = " << dp[n][capacity] << endl;
 
-    // Find selected items
     int w = capacity;
 
     cout << "Selected items: ";
